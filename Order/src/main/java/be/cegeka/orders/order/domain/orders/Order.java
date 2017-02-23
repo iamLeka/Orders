@@ -1,8 +1,10 @@
 package be.cegeka.orders.order.domain.orders;
 
 import be.cegeka.orders.order.domain.customers.Customer;
+import org.joda.time.DateTime;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -14,16 +16,16 @@ public class Order {
     //@GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "ORDER_ID")
     private int id;
-    @Column (name = "ORDER_DATE")
+    @Column (name = "ORDER_DATE",columnDefinition = "DATETIME")
     private Date orderDate;
 
    public Order(){
-
     }
 
     public Order ( Date orderDate){
         this.orderDate = orderDate;
     }
+    public int getId(){return id;}
 
 
     @Override
@@ -41,9 +43,6 @@ public class Order {
         return id;
     }
 
-    public int getOrderId() {
-        return id;
 
-    }
 
 }

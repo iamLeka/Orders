@@ -18,10 +18,10 @@ public class Item {
     @Column(name = "Name")
     private String name;
 
-    @Column(name = "Description")
+    @Column(name = "Description",columnDefinition = "TEXT")
     private String description;
 
-    @Column(name = "Selling_Price")
+    @Column(name = "Selling_Price",columnDefinition = "DECIMAL")
     private double sellingPrice;
 
     @ManyToMany(cascade = ALL)
