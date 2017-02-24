@@ -43,4 +43,7 @@ public class Item {
     public int getId() {
         return id;
     }
+
+    //make sure there is an addItem method in ORDER
+    //make sure there is a getItems method in ORDER
 }
