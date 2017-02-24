@@ -1,6 +1,7 @@
 package be.cegeka.orders.order.domain.customers;
 
 import be.cegeka.orders.order.OrderApplication;
+import be.cegeka.orders.order.domain.orders.Order;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Before;
@@ -30,12 +31,14 @@ public class CustomerRepositoryTest {
     @Inject
     private CustomerRepository customerRepository;
     private Customer seppe, johan;
+    Order order1;
 
     @Before
     public void setupDatabase() {
         seppe = new Customer("Seppe", "Gielen");
         johan = new Customer("Johan", "Vdw");
-
+        order1 = new Order();
+        seppe.addOrder(order1);
         entityManager.persist(seppe);
         entityManager.persist(johan);
     }
@@ -43,6 +46,15 @@ public class CustomerRepositoryTest {
     @Test
     public void getAllShouldReturnAll() throws Exception {
         assertThat(customerRepository.getAll()).contains(seppe, johan);
+    }
+
+    @Test
+    public void getCostumerByID_ReturnsCostumer() throws Exception{
+        assertThat(customerRepository.getCustomerByID(seppe.getId())).isEqualTo(seppe);
+    }
+    @Test
+    public void getCustomerByID_ShouldReturnCustomerAndOrderDetails() throws Exception {
+        assertThat(customerRepository.getCustomerByID(seppe.getId()).getOrders()).contains(order1);
     }
 
     @After

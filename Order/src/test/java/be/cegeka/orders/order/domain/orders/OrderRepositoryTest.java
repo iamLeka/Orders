@@ -59,6 +59,9 @@ public class OrderRepositoryTest {
         }
         assertThat(orderRepository.getAll()).contains(order1,order2);
     }
+
+
+
     @After
     public void cleanDatabase(){
         entityManager.clear();
