@@ -5,10 +5,8 @@ import be.cegeka.orders.order.domain.items.Item;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.time.temporal.ChronoUnit;
+import java.util.*;
 
 @Entity
 @Table(name = "ORDERS")
@@ -23,7 +21,7 @@ class Order {
     private Customer customer;
 
     @Column(name = "ORDER_DATE", columnDefinition = "Date")
-    private LocalDate date;
+    private LocalDate placedOrderDate;
 
     @ManyToMany(targetEntity = Item.class, cascade = CascadeType.ALL)
     @JoinTable(name = "ITEMS_ON_ORDER",
@@ -31,21 +29,30 @@ class Order {
                     @JoinColumn(name = "ORDER_ID", referencedColumnName = "ORDER_ID")},
             inverseJoinColumns = {@JoinColumn(name = "ITEM_ID", referencedColumnName = "ITEM_ID")
             })
-    private List<Item> items;
+    private Map<Item, LocalDate> items;
 
     public Order() {
-        items = new ArrayList<>();
+        items = new HashMap<>();
     }
 
     public Order(Customer customer, LocalDate date) {
         this();
         this.customer = customer;
-        this.date = date;
+        this.placedOrderDate = date;
     }
+
+
 
     public Order(Customer customer, LocalDate date, Item... items) {
         this(customer, date);
-        this.items = Arrays.asList(items);
+        for (Item item: items) {
+            this.items.put(item, ReturnShippingDate());
+
+        }
+    }
+    // todo if stocklevel low shippingdate is + 1 week
+    private LocalDate ReturnShippingDate() {
+        return LocalDate.now().plusDays(1);
     }
 
     public int getOrderId() {
@@ -56,11 +63,11 @@ class Order {
         return customer;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDate getplacedOrderDate() {
+        return placedOrderDate;
     }
 
-    public List<Item> getItems() {
-        return Collections.unmodifiableList(items);
+    public Map<Item, LocalDate> getItems() {
+        return Collections.unmodifiableMap(items);
     }
 }
