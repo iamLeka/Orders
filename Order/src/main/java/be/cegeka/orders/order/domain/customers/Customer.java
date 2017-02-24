@@ -45,4 +45,8 @@ public class Customer {
         orders.add(order);
     }
 
+    public List<Order> getOrders(){
+        return orders;
+    }
+
 }
