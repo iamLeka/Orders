@@ -28,12 +28,12 @@ public class ItemRepositoryTest {
 
 @Inject
     private ItemRepository itemRepository;
-    private Item bic, postit;
+    private OrderItem bic, postit;
 
     @Before
     public void setupDatabase() {
-        bic = new Item ("bic","Something to write whit doh",1.5);
-        postit = new Item ("postit", "Something sticky", 5.5);
+        bic = new OrderItem(new Item ("bic","Something to write whit doh",1.5),1);
+        postit = new OrderItem(new Item ("postit", "Something sticky", 5.5),1);
 
         entityManager.persist(bic);
         entityManager.persist(postit);

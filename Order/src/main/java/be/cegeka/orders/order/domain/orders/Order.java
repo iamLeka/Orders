@@ -2,13 +2,14 @@ package be.cegeka.orders.order.domain.orders;
 
 import be.cegeka.orders.order.domain.customers.Customer;
 import be.cegeka.orders.order.domain.items.Item;
+import be.cegeka.orders.order.domain.items.OrderItem;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 
-@Entity
+@Entity(name = "custOrder")
 @Table(name = "ORDERS")
 public class Order {
     @Id
@@ -23,16 +24,16 @@ public class Order {
     @Column(name = "ORDER_DATE", columnDefinition = "Date")
     private LocalDate placedOrderDate;
 
-    @ManyToMany(targetEntity = Item.class, cascade = CascadeType.ALL)
+    @ManyToMany(targetEntity = OrderItem.class, cascade = CascadeType.ALL)
     @JoinTable(name = "ITEMS_ON_ORDER",
             joinColumns = {
                     @JoinColumn(name = "ORDER_ID", referencedColumnName = "ORDER_ID")},
             inverseJoinColumns = {@JoinColumn(name = "ITEM_ID", referencedColumnName = "ITEM_ID")
             })
-    private Map<Item, LocalDate> items;
+    private List<OrderItem> items;
 
     public Order() {
-        items = new HashMap<>();
+        items = new ArrayList<>();
     }
 
     public Order(Customer customer, LocalDate date) {
@@ -43,10 +44,11 @@ public class Order {
 
 
 
-    public Order(Customer customer, LocalDate date, Item... items) {
+    public Order(Customer customer, LocalDate date, OrderItem... items) {
         this(customer, date);
-        for (Item item: items) {
-            this.items.put(item, ReturnShippingDate());
+        for (OrderItem item: items) {
+            item.setDeliveryDate(ReturnShippingDate());
+            this.items.add(item);
 
         }
     }
@@ -67,7 +69,7 @@ public class Order {
         return placedOrderDate;
     }
 
-    public Map<Item, LocalDate> getItems() {
-        return Collections.unmodifiableMap(items);
+    public List<OrderItem> getItems() {
+        return Collections.unmodifiableList(items);
     }
 }

@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90182ab5-e164-4314-9ecd-a12cf88625a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/customers/Customer.class" afterPath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/customers/Customer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/OrderItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V4__addedOrderItem.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V5__replaceItemOnOrder.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/customers/CustomerRepository.class" afterPath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/customers/CustomerRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/items/Item.class" afterPath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/items/Item.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/items/ItemRepository.class" afterPath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/items/ItemRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/orders/Order.class" afterPath="$PROJECT_DIR$/build/classes/main/be/cegeka/orders/order/domain/orders/Order.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/be/cegeka/orders/order/domain/items/ItemRepositoryTest.class" afterPath="$PROJECT_DIR$/build/classes/test/be/cegeka/orders/order/domain/items/ItemRepositoryTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.class" afterPath="$PROJECT_DIR$/build/classes/test/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/Customer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/db/migration/V1__initialDatabase.sql" afterPath="$PROJECT_DIR$/build/resources/main/db/migration/V1__initialDatabase.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/CustomerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/CustomerRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/Item.java" afterPath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/Item.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/ItemRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/ItemRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/Order.java" afterPath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/OrderRepository.java" afterPath="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/OrderRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__initialDatabase.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__initialDatabase.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/items/ItemRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/items/ItemRepositoryTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -36,59 +48,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/Customer.java">
+      <file leaf-file-name="V1__initialDatabase.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__initialDatabase.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="24" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="V2__fixedErrors.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V2__fixedErrors.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="V5__replaceItemOnOrder.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V5__replaceItemOnOrder.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="30" column="92" lean-forward="false" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/OrderRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/OrderItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#663#664#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#964#965#0" expanded="true" />
-                <element signature="e#991#992#0" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
-                <element signature="e#1057#1058#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1117#1118#0" expanded="true" />
-                <element signature="e#1155#1156#0" expanded="true" />
-                <element signature="e#1184#1185#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerRepositoryTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/customers/CustomerRepositoryTest.java">
+      <file leaf-file-name="V4__addedOrderItem.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V4__addedOrderItem.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="17">
+              <caret line="1" column="46" lean-forward="false" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderRepositoryTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OrderRepositoryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
-              <caret line="75" column="52" lean-forward="true" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerRepository.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/CustomerRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -787,12 +837,21 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V3__addedIntermediateOrderItem.sql" />
         <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/stock/Stock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V3__addCustomerEmail.sql" />
         <option value="$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/customers/CustomerRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/Item.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/CustomerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/ItemRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/items/ItemRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V3__addCustomerEmail.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__initialDatabase.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V4__AddedOrderItem.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/OrderItem.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V5__replaceItemOnOrder.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V4__addedOrderItem.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/OrderRepository.java" />
       </list>
     </option>
   </component>
@@ -1274,7 +1333,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
-  <component name="RunManager" selected="JUnit.OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders">
+  <component name="RunManager" selected="JUnit.OrderRepositoryTest">
     <configuration default="false" name="OrderRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1810,10 +1869,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CustomerRepositoryTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ItemRepositoryTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.OrderRepositoryTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OrderRepositoryTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerRepositoryTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ItemRepositoryTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.StockRepositoryTest" />
       </list>
     </recent_temporary>
@@ -1828,44 +1887,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487861881913</updated>
-      <workItem from="1487861883122" duration="12267000" />
+      <workItem from="1487861883122" duration="18313000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 11h 55m 30s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 35m 29s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 11h 56m 58s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 36m 31s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 11h 57m 34s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 36m 55s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 11h 57m 49s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 39m 08s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 12h 00m 46s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 39m 33s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 12h 01m 07s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 41m 42s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 12h 01m 48s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 42m 35s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 12h 02m 12s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 43m 16s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 12h 02m 33s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 43m 38s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OrderRepositoryTest_ordersAdded_searchCustomer_ordersContainAllAddedOrders - 2017.02.24 at 12h 03m 18s.xml">
-      <configuration name="OrderRepositoryTest.ordersAdded_searchCustomer_ordersContainAllAddedOrders" configurationId="JUnit" />
+    <history-entry file="OrderRepositoryTest - 2017.02.24 at 13h 44m 59s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12267000" />
+    <option name="totallyTimeSpent" value="18313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1936,22 +1995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V2__fixedErrors.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="54" lean-forward="false" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__initialDatabase.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/stock/Stock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1970,43 +2013,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/items/ItemRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="75" column="52" lean-forward="true" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V3__addCustomerEmail.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
+        <state relative-caret-position="561">
           <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2035,7 +2044,117 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/customers/CustomerRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+          <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/items/ItemRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="34" column="81" lean-forward="false" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/ItemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V3__addCustomerEmail.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="32" column="4" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding>
+            <element signature="e#769#770#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/33fbaa7276b774ef0925f541640f6ff23fbc62dc/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/OneToOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="134" column="14" lean-forward="false" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/items/OrderItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V5__replaceItemOnOrder.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V2__fixedErrors.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__initialDatabase.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="24" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V4__addedOrderItem.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="46" lean-forward="false" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="30" column="92" lean-forward="false" selection-start-line="30" selection-start-column="92" selection-end-line="30" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/cegeka/orders/order/domain/orders/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>

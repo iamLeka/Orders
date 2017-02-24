@@ -5,6 +5,7 @@ import be.cegeka.orders.order.domain.customers.Customer;
 import be.cegeka.orders.order.domain.customers.CustomerRepository;
 import be.cegeka.orders.order.domain.items.Item;
 import be.cegeka.orders.order.domain.items.ItemRepository;
+import be.cegeka.orders.order.domain.items.OrderItem;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Before;
@@ -34,16 +35,16 @@ public class OrderRepositoryTest {
     private OrderRepository orderRepository;
     private Order order1, order2;
     private Customer sanne;
-    private Item item1, item2, item3;
+    private OrderItem item1, item2, item3;
     @Inject
     private ItemRepository itemRepository;
 
     @Before
     public void setUp(){
         sanne = new Customer("Sanne","Vermeiren", "sanne.vermeiren@cegeka.com");
-        item1 = new Item("Wireless mouse","Logitech MX Master 2", 89.99);
-        item2 = new Item("Lightning cable","Cable to connect iPhone 5 and later", 15.99);
-        item3 = new Item("Headset", "Wireless headset Sony with noise cancelling", 149.99);
+        item1 = new OrderItem(new Item("Wireless mouse","Logitech MX Master 2", 89.99),1);
+        item2 = new OrderItem(new Item("Lightning cable","Cable to connect iPhone 5 and later", 15.99),1);
+        item3 = new OrderItem(new Item("Headset", "Wireless headset Sony with noise cancelling", 149.99),1);
         order1 = new Order(sanne, LocalDate.now(), item1, item2, item3);
         order2 = new Order(new Customer("Wouter", "Bauweraerts", "wouter.bauweraerts@cegeka.com"), LocalDate.now(), item1, item2, item3);
 

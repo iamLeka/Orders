@@ -30,7 +30,7 @@ public class Item {
         return itemId;
     }
 
-   /* public String getName() {
+    public String getName() {
         return name;
     }
 
@@ -40,5 +40,5 @@ public class Item {
 
     public double getSellingPrice() {
         return sellingPrice;
-    }*/
+    }
 }

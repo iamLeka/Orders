@@ -12,7 +12,7 @@ public class CustomerRepository {
     private EntityManager entityManager;
 
     public List<Customer> getAll(){
-        return entityManager.createQuery("select c, o from Customer c join custOrder o" , Customer.class).getResultList();
+        return entityManager.createQuery("select c from Customer c" , Customer.class).getResultList();
     }
 
 }

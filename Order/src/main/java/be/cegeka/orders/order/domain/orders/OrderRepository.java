@@ -12,6 +12,6 @@ public class OrderRepository {
     private EntityManager entityManager;
 
     public List<Order> getAll(){
-        return entityManager.createQuery("select o from Order o", Order.class).getResultList();
+        return entityManager.createQuery("select o from custOrder o", Order.class).getResultList();
     }
 }
