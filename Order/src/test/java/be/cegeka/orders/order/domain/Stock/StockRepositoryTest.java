@@ -38,10 +38,11 @@ public class StockRepositoryTest {
 
     @Before
     public void setUpDatabase(){
-        stockItems = new ArrayList<>();
+        stock = new Stock();
+        //stockItems = new ArrayList<>();
        // item = new Item("smurf", "blue", 2.0);
 
-        entityManager.persist(stockItems);
+        entityManager.persist(stock);
       //  entityManager.persist(item);
     }
 

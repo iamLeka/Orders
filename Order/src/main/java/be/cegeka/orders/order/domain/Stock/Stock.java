@@ -20,13 +20,13 @@ public class Stock {
 
     @OneToOne(cascade = ALL)
     @JoinColumn(name = "ITEM_ID" )
-//    @JoinTable(
-//            name = "Stock",
-//            joinColumns = {@JoinColumn(name = "STOCK_ID")},
-//            inverseJoinColumns = {@JoinColumn(name = "ITEM_ID")})
     private Item item;
 
     public Stock() {
+    }
+
+    public Stock(Item item) {
+        this.item = item;
     }
 
     public int getId() {
@@ -37,7 +37,7 @@ public class Stock {
         this.item = item;
     }
 
-//    public List<Item> getItems() {
-//        return items;
-//    }
+    public Item getItem() {
+        return item;
+    }
 }
