@@ -42,17 +42,19 @@ public class StockRepositoryTest {
         item1 = new Item("colaRola", "silver balls", 3.0);
         stock = new Stock(10, item);
         stock1 = new Stock(5, item1);
-        stock.addItem(item);
-        stock.addItem(item1);
-
-        entityManager.persist(stock);
-        entityManager.persist(stock1);
 
     }
 
     @Test
     public void getAllStock_returnsAllStock() throws Exception{
+
+        stock.addItem(item);
+        stock1.addItem(item1);
+
+        entityManager.persist(stock);
+        entityManager.persist(stock1);
         assertThat(stockRepository.getAllStock()).contains(stock, stock1);
     }
+
 
 }

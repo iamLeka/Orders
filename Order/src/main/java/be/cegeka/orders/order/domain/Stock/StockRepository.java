@@ -14,9 +14,4 @@ public class StockRepository {
     public List<Stock> getAllStock(){
         return entityManager.createQuery("select s from Stock s", Stock.class).getResultList();
     }
-
-
-
-
-
 }
