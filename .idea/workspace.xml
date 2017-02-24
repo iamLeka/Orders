@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7eae0ad6-08ef-4a84-a9b2-8faa9202cfe7" name="Default" comment="" />
+    <list default="true" id="cc7501ef-27f0-48b0-a676-81cc53c5d56a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/Order/.gradle/" />
     <ignored path="$PROJECT_DIR$/Order/.idea/" />
     <ignored path="$PROJECT_DIR$/Order/build/" />
@@ -26,31 +26,9 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <PATH>
-              <PATH_ELEMENT>
-                <option name="myItemId" value="" />
-                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
-              </PATH_ELEMENT>
-              <PATH_ELEMENT>
-                <option name="myItemId" value="Orders" />
-                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
-              </PATH_ELEMENT>
-            </PATH>
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Orders" />
-  </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="ItemRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/items/ItemRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,11 +77,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+=======
+      <file leaf-file-name="Stock.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/Stock/Stock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+>>>>>>> 3c3122caa2ad47ee0e4ed6955d1d988f5298c834
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Stock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/Stock/Stock.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -118,11 +104,22 @@
                 <element signature="e#680#681#0" expanded="true" />
                 <element signature="e#709#710#0" expanded="true" />
                 <element signature="e#736#737#0" expanded="true" />
+=======
+      <file leaf-file-name="OneToOne.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/33fbaa7276b774ef0925f541640f6ff23fbc62dc/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/OneToOne.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="117" column="10" lean-forward="false" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#5176#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+>>>>>>> 3c3122caa2ad47ee0e4ed6955d1d988f5298c834
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="OrderRepositoryTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Order/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -138,9 +135,13 @@
       </file>
       <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Order/.idea/misc.xml">
+=======
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/items/Item.java">
+>>>>>>> 3c3122caa2ad47ee0e4ed6955d1d988f5298c834
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -697,39 +698,37 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/../../05-java-methods/labs" value="2967209018841" />
-        <entry key="$PROJECT_DIR$/../../06-java-conditional-statements/labs" value="2967209018872" />
-        <entry key="$PROJECT_DIR$/../../07-java-loops/labs" value="2967908031657" />
-        <entry key="$PROJECT_DIR$/../../08-java-modifiers/labs" value="2968077622107" />
-        <entry key="$PROJECT_DIR$/../../09-java-cli" value="2967209018904" />
-        <entry key="$PROJECT_DIR$/../../10-intro-to-OO" value="2967896500777" />
-        <entry key="$PROJECT_DIR$/../../11-classes" value="2968077622128" />
-        <entry key="$PROJECT_DIR$/../../12-howToTest" value="2968646290644" />
-        <entry key="$PROJECT_DIR$/../../13-inheritanceAndComposition" value="2969115821924" />
-        <entry key="$PROJECT_DIR$/../../14-interfacesAbstractClasses" value="2969313014034" />
-        <entry key="$PROJECT_DIR$/../../15-collectionsAndMaps" value="2969626897883" />
-        <entry key="$PROJECT_DIR$/../../16-java-generics" value="2969824385982" />
-        <entry key="$PROJECT_DIR$/../../17-exceptionHandling" value="2970360891371" />
-        <entry key="$PROJECT_DIR$/../../18-nestedClasses" value="2970504909007" />
-        <entry key="$PROJECT_DIR$/../../19-design-patterns" value="2971910131263" />
-        <entry key="$PROJECT_DIR$/../../BibliothourisChallenge/CGKSBibliothouris" value="2975070505414" />
-        <entry key="$PROJECT_DIR$/../../CGKSBibliothouris" value="2970665220736" />
-        <entry key="$PROJECT_DIR$/../../CleanCodeOther/CleanCode" value="2975687207713" />
-        <entry key="$PROJECT_DIR$/../../CleanCodeWilliam/CleanCode" value="2975692540923" />
-        <entry key="$PROJECT_DIR$/../../ExtraDesignPatterns" value="2972047268441" />
-        <entry key="$PROJECT_DIR$/../../ExtraExercises/labs" value="2967896500811" />
-        <entry key="$PROJECT_DIR$/../../FransExample/CGKSBibliothouris" value="2975509463487" />
-        <entry key="$PROJECT_DIR$/../../ProductivityWithShortcuts" value="2969115363991" />
-        <entry key="$PROJECT_DIR$/../../SelfEval3/CleanCode" value="2975682491029" />
-        <entry key="$PROJECT_DIR$" value="4463557079213" />
-        <entry key="$PROJECT_DIR$/../../largeExcercises" value="2970320342926" />
-        <entry key="$PROJECT_DIR$/../../new-group-CGSK/CGKSBibliothouris-master" value="2970834602980" />
-        <entry key="$PROJECT_DIR$/../../selfEvaluation" value="2971629461639" />
-        <entry key="$PROJECT_DIR$/../../variables/01-basicConcepts/labs" value="2967209018920" />
-        <entry key="$PROJECT_DIR$/../../variables/02-arrays/Labs" value="2967378639806" />
-        <entry key="$PROJECT_DIR$/../../variables/03-multidimensional-arrays/Labs" value="2968077622152" />
-        <entry key="C:/GroupProject/CGKSBibliothouris" value="2970843207662" />
-        <entry key="C:/OtherProjects/SecretService" value="2974872782106" />
+        <entry key="$PROJECT_DIR$/../../Bibliothouris/CGKSBibliothouris" value="2970665205610" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/05-java-methods/labs" value="2967072450929" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/06-java-conditional-statements/labs" value="2967072450960" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/07-java-loops/labs" value="2967899477074" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/08-java-modifiers/labs" value="2968073268310" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/09-java-cli" value="2967072450976" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/10-intro-to-OO" value="2967899477074" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/11-classes" value="2968005087646" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/12-howToTest" value="2968634354028" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/13-inheritanceAndComposition" value="2969110612941" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/14-interfacesAbstractClasses" value="2969309997974" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/15-collectionsAndMaps" value="2969630794300" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/16-java-generics" value="2969800965913" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/17-exceptionHandling" value="2970360570430" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/18-nestedClasses" value="2970501790885" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/19-design-patterns" value="2971910184507" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/ExtraDesignPatterns" value="2972051342283" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/ExtraExercises/labs" value="2967899477090" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/selfEvaluation" value="2971700475142" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/variables/01-basicConcepts/labs" value="2967072451006" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/variables/02-ararys/Labs" value="2967108375372" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/variables/02-arrays/Labs" value="2967380363970" />
+        <entry key="$PROJECT_DIR$/../../CegekaSchool/variables/03-multidimensional-arrays/Labs" value="2968005087678" />
+        <entry key="$PROJECT_DIR$/../../Clean code/Elise/CleanCode" value="2975682352449" />
+        <entry key="$PROJECT_DIR$/../../Clean code/Gratov/CleanCode" value="2975678667137" />
+        <entry key="$PROJECT_DIR$/../../Clean code/KevinS/CleanCode" value="2975691565779" />
+        <entry key="$PROJECT_DIR$/../../Clean code/Rodrigo/CleanCode" value="2975686739324" />
+        <entry key="$PROJECT_DIR$" value="4463556423989" />
+        <entry key="$PROJECT_DIR$/Order" value="1487852141135" />
+        <entry key="$PROJECT_DIR$/../../ProductivityWithShortcuts" value="2969115818331" />
+        <entry key="$PROJECT_DIR$/../../SecretGuesser/SecretGuesserWithSpring/secretguessinggame" value="1487326975375" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -941,7 +940,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Order/src/test/java/be/cegeka/orders/order/domain/Stock/StockRepositoryTest.java" />
+=======
+>>>>>>> 3c3122caa2ad47ee0e4ed6955d1d988f5298c834
         <option value="$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/Stock/Stock.java" />
       </list>
     </option>
@@ -967,6 +969,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -990,20 +994,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Supplier" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Order" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1023,124 +1013,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stock" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Order" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Order" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="items" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Order" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="customers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1343,6 +1215,10 @@
               <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1358,34 +1234,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="order" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="items" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Order" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="order" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/settings.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.StockRepositoryTest">
-    <configuration default="false" name="StockRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="be.cegeka.orders.order.domain.Stock.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.All in Order_test">
+    <configuration default="false" name="All in Order_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Order_test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.cegeka.orders.order.domain.Stock" />
-      <option name="MAIN_CLASS_NAME" value="be.cegeka.orders.order.domain.Stock.StockRepositoryTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/Order" />
@@ -1460,9 +1383,6 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration default="true" type="ApexTest" factoryName="Apex Test">
-      <method />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -1484,16 +1404,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="BatchConfigurationType" factoryName="Batch">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -1615,25 +1525,12 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
-      <setting name="environment" value="" />
-      <setting name="specsToExecute" value="" />
-      <setting name="tags" value="" />
-      <setting name="parallelNodes" value="" />
-      <setting name="execInParallel" value="false" />
-      <setting name="programParameters" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="moduleName" value="" />
-      <envMap />
-      <setting name="rowsRange" value="" />
-      <method />
-    </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.StockRepositoryTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.All in Order_test" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.StockRepositoryTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Order_test" />
       </list>
     </recent_temporary>
   </component>
@@ -1642,17 +1539,29 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7eae0ad6-08ef-4a84-a9b2-8faa9202cfe7" name="Default" comment="" />
-      <created>1487925341840</created>
+      <changelist id="cc7501ef-27f0-48b0-a676-81cc53c5d56a" name="Default" comment="" />
+      <created>1487926546623</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1487925341840</updated>
+      <updated>1487926546623</updated>
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StockRepositoryTest - 2017.02.24 at 09h 38m 22s.xml">
-      <configuration name="StockRepositoryTest" configurationId="JUnit" />
+    <history-entry file="All_in_Order_test - 2017.02.24 at 09h 56m 37s.xml">
+      <configuration name="All in Order_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Order_test - 2017.02.24 at 10h 03m 00s.xml">
+      <configuration name="All in Order_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Order_test - 2017.02.24 at 10h 03m 24s.xml">
+      <configuration name="All in Order_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Order_test - 2017.02.24 at 10h 05m 14s.xml">
+      <configuration name="All in Order_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Order_test - 2017.02.24 at 10h 05m 43s.xml">
+      <configuration name="All in Order_test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StockRepositoryTest - 2017.02.24 at 09h 54m 08s.xml">
       <configuration name="StockRepositoryTest" configurationId="JUnit" />
@@ -1666,17 +1575,26 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1689,7 +1607,10 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20735608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.075159915" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> 3c3122caa2ad47ee0e4ed6955d1d988f5298c834
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1711,14 +1632,15 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Order/.idea/misc.xml">
+    <entry file="file://$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/items/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/orders/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1750,10 +1672,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+=======
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.0.11.Final/f798d6a909ca06997b9350948edb79f8e19171af/hibernate-core-5.0.11.Final-sources.jar!/org/hibernate/cfg/OneToOneSecondPass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+>>>>>>> 3c3122caa2ad47ee0e4ed6955d1d988f5298c834
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Order/src/test/java/be/cegeka/orders/order/domain/orders/OrderRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1761,10 +1690,20 @@
           <folding>
             <element signature="e#1925#1926#0" expanded="true" />
             <element signature="e#1962#1963#0" expanded="true" />
+=======
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/33fbaa7276b774ef0925f541640f6ff23fbc62dc/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/OneToOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="117" column="10" lean-forward="false" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#5176#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+>>>>>>> 3c3122caa2ad47ee0e4ed6955d1d988f5298c834
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/items/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
@@ -1785,6 +1724,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+=======
+    <entry file="file://$PROJECT_DIR$/Order/src/main/java/be/cegeka/orders/order/domain/Stock/Stock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+>>>>>>> 3c3122caa2ad47ee0e4ed6955d1d988f5298c834
           <folding />
         </state>
       </provider>

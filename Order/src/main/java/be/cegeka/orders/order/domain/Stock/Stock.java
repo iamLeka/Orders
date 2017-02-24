@@ -18,7 +18,8 @@ public class Stock {
     @Column(name = "STOCK_ID")
     private int id;
 
-    @OneToOne(cascade = ALL, mappedBy = "ITEM_ID")
+    @OneToOne(cascade = ALL)
+    @JoinColumn(name = "ITEM_ID" )
     private Item item;
 
     public Stock() {
