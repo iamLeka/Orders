@@ -5,6 +5,7 @@ import be.cegeka.orders.order.domain.customers.Customer;
 import be.cegeka.orders.order.domain.customers.CustomerRepository;
 import org.apache.poi.sl.draw.geom.CosExpression;
 import org.assertj.core.api.Assertions;
+import org.joda.time.DateTime;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,6 +24,8 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = OrderApplication.class)
@@ -40,7 +43,7 @@ public class OrderRepositoryTest {
     @Before
     public void db_setup(){
         customer = new Customer("Kevin","Smet");
-        order1 = new Order(new Date(2016,10,25));
+        order1 = new Order(new Date());
         order2 =  new Order(new Date());
         customer.addOrder(order1);
         customer.addOrder(order2);
@@ -54,7 +57,7 @@ public class OrderRepositoryTest {
         for (Order order: orders) {
             System.out.println(order);
         }
-        Assertions.assertThat(orderRepository.getAll()).contains(order1,order2);
+        assertThat(orderRepository.getAll()).contains(order1,order2);
     }
     @After
     public void cleanDatabase(){
