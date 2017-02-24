@@ -9,6 +9,7 @@ import java.util.List;
 public class OrderRepository {
     @PersistenceContext
     private EntityManager entityManager;
+
     public List<Order> getAll() {
     return entityManager.createQuery("select o from Order o",Order.class).getResultList();
     }

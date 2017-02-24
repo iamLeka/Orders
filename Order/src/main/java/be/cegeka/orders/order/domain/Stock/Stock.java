@@ -22,7 +22,7 @@ public class Stock {
     private int quantity;
 
     @OneToOne(cascade = ALL)
-    @JoinColumn(name = "ITEM_ID" )
+    @JoinColumn(name = "ITEM_ID", nullable = false)
     private Item item;
 
     public Stock() {
