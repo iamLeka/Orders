@@ -1,32 +1,34 @@
 package be.cegeka.orders.order.domain.stock;
 
+import be.cegeka.orders.order.domain.items.Item;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "STOCK")
 public class Stock {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "STOCK_ID")
     private int stockId;
-    @NotNull
-    @Column(name = "ITEM_ID")
-    @OneToOne(mappedBy = "ITEM_ID")
-    private int itemId;
 
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = Item.class)
+    @JoinColumn(name = "ITEM_ID", referencedColumnName = "ITEM_ID")
+    private Item item;
 
-    public Stock(int itemId) {
-        this.itemId = itemId;
+    public Stock() {
+    }
+
+    public Stock(Item item) {
+        this.item = item;
     }
 
     public int getStockId() {
         return stockId;
     }
-
-
-    public int getItemId() {
-        return itemId;
+    
+    public Item getItem() {
+        return item;
     }
 }
