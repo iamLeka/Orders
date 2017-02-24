@@ -40,12 +40,12 @@ public class OrderRepositoryTest {
 
     @Before
     public void setUp(){
-        sanne = new Customer("Sanne","Vermeiren");
+        sanne = new Customer("Sanne","Vermeiren", "sanne.vermeiren@cegeka.com");
         item1 = new Item("Wireless mouse","Logitech MX Master 2", 89.99);
         item2 = new Item("Lightning cable","Cable to connect iPhone 5 and later", 15.99);
         item3 = new Item("Headset", "Wireless headset Sony with noise cancelling", 149.99);
         order1 = new Order(sanne, LocalDate.now(), item1, item2, item3);
-        order2 = new Order(new Customer("Wouter", "Bauweraerts"), LocalDate.now(), item1, item2, item3);
+        order2 = new Order(new Customer("Wouter", "Bauweraerts", "wouter.bauweraerts@cegeka.com"), LocalDate.now(), item1, item2, item3);
 
         entityManager.persist(order1);
         entityManager.persist(order2);
@@ -70,6 +70,11 @@ public class OrderRepositoryTest {
     public void tblItem_ContainsAllItemsThatWhereAddedInPrviousOrders(){
         Assertions.assertThat(itemRepository.getAll()).contains(item1, item2, item3);
     }
+
+    /*@Test
+    public void ordersAdded_searchCustomer_ordersContainAllAddedOrders(){
+        Assertions.assertThat(customerRepository.getAll().get(0).getOrders()).contains(order1);
+    }*/
 
     @After
     public void clear(){

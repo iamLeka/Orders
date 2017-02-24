@@ -27,7 +27,7 @@ public class Stock {
     public int getStockId() {
         return stockId;
     }
-    
+
     public Item getItem() {
         return item;
     }
