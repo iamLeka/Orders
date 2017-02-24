@@ -21,18 +21,17 @@ public class Customer {
     @Column(name = "EMAIL")
     private String email;
 
-   /* @OneToMany(targetEntity = Order.class, cascade = CascadeType.ALL)
-    @JoinTable(name = "ORDERS", joinColumns = {@JoinColumn(name = "CUSTOMER_ID", referencedColumnName = "CUSTOMER_ID")},
-    inverseJoinColumns = @JoinColumn(name = "CUSTOMER_ID", referencedColumnName = "CUSTOMER_ID"))
-    private List<Order> orders;*/
-
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "CUSTOMER_ID")
+    private List<Order> orders;
 
 
     private Customer() {
-//        orders = new ArrayList<>();
+        orders = new ArrayList<>();
     }
 
     public Customer(String name, String lastName, String email) {
+        this();
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -52,5 +51,9 @@ public class Customer {
 
     public String getEmail() {
         return email;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
     }
 }

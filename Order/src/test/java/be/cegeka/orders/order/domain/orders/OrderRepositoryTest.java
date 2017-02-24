@@ -71,10 +71,10 @@ public class OrderRepositoryTest {
         Assertions.assertThat(itemRepository.getAll()).contains(item1, item2, item3);
     }
 
-    /*@Test
+    @Test
     public void ordersAdded_searchCustomer_ordersContainAllAddedOrders(){
-        Assertions.assertThat(customerRepository.getAll().get(0).getOrders()).contains(order1);
-    }*/
+        Assertions.assertThat(customerRepository.getAll().get(1).getOrders()).contains(order1);
+    }
 
     @After
     public void clear(){
