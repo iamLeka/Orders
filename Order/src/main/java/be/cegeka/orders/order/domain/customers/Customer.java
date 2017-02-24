@@ -18,15 +18,11 @@ public class Customer {
     private String name;
     @Column(name = "LAST_NAME")
     private String lastName;
-    @OneToMany(cascade = CascadeType.MERGE)
-    @JoinTable(
-            name = "orders",
-            joinColumns = {@JoinColumn(name="CUSTOMER_ID")},
-            inverseJoinColumns = {@JoinColumn(name="ORDER_ID")}
-    )
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "CUSTOMER_ID", nullable = false)
     private List<Order> orders;
 
-    private Customer() {
+    public Customer() {
         orders = new ArrayList<>();
     }
 
