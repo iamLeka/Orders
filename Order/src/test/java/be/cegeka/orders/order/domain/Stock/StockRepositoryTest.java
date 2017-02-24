@@ -38,11 +38,10 @@ public class StockRepositoryTest {
 
     @Before
     public void setUpDatabase(){
-        stockRepository = new StockRepository();
-        stock = new Stock(10, item);
-        stock1 = new Stock(5, item1);
         item = new Item("smurf", "blue", 2.0);
         item1 = new Item("colaRola", "silver balls", 3.0);
+        stock = new Stock(10, item);
+        stock1 = new Stock(5, item1);
         stock.addItem(item);
         stock.addItem(item1);
 
