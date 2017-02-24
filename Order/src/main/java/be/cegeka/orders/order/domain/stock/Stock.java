@@ -1,9 +1,8 @@
+package be.cegeka.orders.order.domain.stock;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-/**
- * Created by kevinbi on 23/02/2017.
- */
 @Entity
 @Table(name = "STOCK")
 public class Stock {
