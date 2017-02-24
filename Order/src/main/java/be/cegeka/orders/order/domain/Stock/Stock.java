@@ -18,6 +18,9 @@ public class Stock {
     @Column(name = "STOCK_ID")
     private int id;
 
+    @Column(name = "QUANTITY")
+    private int quantity;
+
     @OneToOne(cascade = ALL)
     @JoinColumn(name = "ITEM_ID" )
     private Item item;
@@ -25,7 +28,8 @@ public class Stock {
     public Stock() {
     }
 
-    public Stock(Item item) {
+    public Stock(int quantity, Item item) {
+        this.quantity = quantity;
         this.item = item;
     }
 
@@ -39,5 +43,9 @@ public class Stock {
 
     public Item getItem() {
         return item;
+    }
+
+    public int getQuantity() {
+        return quantity;
     }
 }

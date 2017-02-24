@@ -32,23 +32,28 @@ public class StockRepositoryTest {
     @Inject
     private StockRepository stockRepository;
     private List<Stock> stockItems;
-    private Item item;
-    private Stock stock;
+    private Item item, item1;
+    private Stock stock, stock1;
 
 
     @Before
     public void setUpDatabase(){
-        stock = new Stock();
-        //stockItems = new ArrayList<>();
-       // item = new Item("smurf", "blue", 2.0);
+        stockRepository = new StockRepository();
+        stock = new Stock(10, item);
+        stock1 = new Stock(5, item1);
+        item = new Item("smurf", "blue", 2.0);
+        item1 = new Item("colaRola", "silver balls", 3.0);
+        stock.addItem(item);
+        stock.addItem(item1);
 
         entityManager.persist(stock);
-      //  entityManager.persist(item);
+        entityManager.persist(stock1);
+
     }
 
     @Test
     public void getAllStock_returnsAllStock() throws Exception{
-        assertThat(stockRepository.getAllStock()).contains(stock);
+        assertThat(stockRepository.getAllStock()).contains(stock, stock1);
     }
 
 }
