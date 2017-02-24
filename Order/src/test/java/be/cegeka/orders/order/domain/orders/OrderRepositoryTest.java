@@ -2,10 +2,6 @@ package be.cegeka.orders.order.domain.orders;
 
 import be.cegeka.orders.order.OrderApplication;
 import be.cegeka.orders.order.domain.customers.Customer;
-import be.cegeka.orders.order.domain.customers.CustomerRepository;
-import org.apache.poi.sl.draw.geom.CosExpression;
-import org.assertj.core.api.Assertions;
-import org.joda.time.DateTime;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,14 +9,11 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-import sun.util.calendar.BaseCalendar;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import java.text.DateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
