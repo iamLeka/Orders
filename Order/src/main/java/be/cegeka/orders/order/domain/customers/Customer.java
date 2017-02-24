@@ -18,6 +18,8 @@ public class Customer {
     private String name;
     @Column(name = "LAST_NAME")
     private String lastName;
+    @Column(name = "EMAIL")
+    private String email;
 
    /* @OneToMany(targetEntity = Order.class, cascade = CascadeType.ALL)
     @JoinTable(name = "ORDERS", joinColumns = {@JoinColumn(name = "CUSTOMER_ID", referencedColumnName = "CUSTOMER_ID")},
@@ -30,16 +32,25 @@ public class Customer {
 //        orders = new ArrayList<>();
     }
 
-    public Customer(String name, String lastName) {
+    public Customer(String name, String lastName, String email) {
         this.name = name;
         this.lastName = lastName;
+        this.email = email;
     }
 
     public int getId() {
         return id;
     }
 
-    /*public List<Order> getOrders() {
-        return orders;
-    }*/
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }
