@@ -15,18 +15,33 @@ public class StockService {
     private Stock stock;
     private Item item;
 
-    public int getItemQuantity(int quantity) {
-        quantity = 0;
-        if (stockRepository.getAllStock().contains(item)) {
-            quantity++;
-        } else {
-            stock.addItem(item);
-            quantity++;
+    //My Idea
+    /*
+    public int getQuantity(){
+
+        int quantity;
+        if (stockRepository.getAllStock().contains(null)){
+           return quantity = 0;
         }
-        return quantity;
+        return quantity = stock.getQuantity();
     }
 
+    public void addItemIncreasesQuantity(int quantity){
+
+        stock.addItem(item);
+            quantity++;
+        }
+    */
     public List<Stock> getAllStock() {
-        return
+        return stockRepository.getAllStock();
     }
+
+    public void addStock(Item item, int quantity) {
+        stockRepository.addStock();
+    }
+
+    public void updateQuantity(Item item, int quantity) {
+    }
+
+
 }

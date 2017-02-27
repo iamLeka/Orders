@@ -1,5 +1,7 @@
 package be.cegeka.orders.order.domain.Stock;
 
+import be.cegeka.orders.order.domain.items.Item;
+
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,4 +16,9 @@ public class StockRepository {
     public List<Stock> getAllStock(){
         return entityManager.createQuery("select s from Stock s", Stock.class).getResultList();
     }
+
+    public void addStock(Item item, int quantity){
+        entityManager.createQuery("")
+    }
+    //maybe should make a method to add stock and a method to alter table column Quantity value or something?
 }
