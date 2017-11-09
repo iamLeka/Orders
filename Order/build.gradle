@@ -52,8 +52,7 @@ jacocoTestCoverageVerification {
         }
         rule {
             element = 'PACKAGE'
-            includes = ['be.cegeka.orders.*']
-            excludes = ['be.cegeka.orders.order.OrderApplication']
+            includes = ['be.cegeka.orders.order.domain.*']
             limit {
                 counter = 'COMPLEXITY'
                 minimum = 0.7
