@@ -16,15 +16,10 @@ public class Order {
     private int id;
     @Column(name="order_date")
     private Date order_date;
-    @Column(name="customer_id")
-    private Customer customer;
-    @OneToMany
-    @JoinColumn(name="order_id")
-    private List<Order> orders;
+
 
     public Order(Date order_date, Customer customer) {
         this.order_date = order_date;
-        this.customer = customer;
     }
 
     public Order() {
@@ -38,7 +33,4 @@ public class Order {
         return order_date;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
 }
