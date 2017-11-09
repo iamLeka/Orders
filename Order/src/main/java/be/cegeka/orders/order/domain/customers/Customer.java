@@ -16,20 +16,19 @@ public class Customer {
     private String firstName;
     @Column(name = "EMAIL")
     private String email;
-    @Column(name = "ADRESS")
-    private String adress;
+    @Column(name = "ADDRESS")
+    private String address;
     @Column(name = "PHONE")
     private String phone;
 
     private Customer() {
     }
 
-    public Customer(int id, String lastName, String firstName, String email, String adress, String phone) {
-        this.id = id;
+    public Customer(String lastName, String firstName, String email, String address, String phone) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.email = email;
-        this.adress = adress;
+        this.address = address;
         this.phone = phone;
     }
 
