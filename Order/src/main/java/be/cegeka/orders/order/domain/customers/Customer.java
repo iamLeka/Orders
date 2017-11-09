@@ -1,6 +1,7 @@
 package be.cegeka.orders.order.domain.customers;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "CUSTOMERS")
@@ -21,6 +22,10 @@ public class Customer {
     @Column(name = "PHONE")
     private String phone;
 
+    @OneToMany
+    @JoinColumn (name ="order_id")
+    private List<Order> orderList;
+
     private Customer() {
     }
 
@@ -30,6 +35,26 @@ public class Customer {
         this.email = email;
         this.address = address;
         this.phone = phone;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 
     public int getId() {
