@@ -7,19 +7,20 @@ import java.sql.Date;
 import java.util.List;
 
 @Entity
-@Table(name="orders")
+@Table(name = "orders")
 
 public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name="order_date")
-    private Date order_date;
+    @Column(name = "order_date")
+    private Date orderDate;
 
 
-    public Order(Date order_date, Customer customer) {
-        this.order_date = order_date;
+
+    public Order(Date orderDate) {
+        this.orderDate = orderDate;
     }
 
     public Order() {
@@ -30,7 +31,7 @@ public class Order {
     }
 
     public Date getOrder_date() {
-        return order_date;
+        return orderDate;
     }
 
 }
