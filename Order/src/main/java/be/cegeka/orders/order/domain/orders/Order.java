@@ -7,14 +7,15 @@ import java.sql.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "ORDERS")
 
 public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="ORDER_ID")
     private int id;
-    @Column(name = "order_date")
+    @Column(name = "ORDER_DATE")
     private Date orderDate;
 
 
