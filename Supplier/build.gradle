@@ -50,14 +50,6 @@ jacocoTestCoverageVerification {
                 minimum = 0.7
             }
         }
-        rule {
-            element = 'PACKAGE'
-            includes = ['be.cegeka.orders.*']
-            limit {
-                counter = 'COMPLEXITY'
-                minimum = 0.7
-            }
-        }
     }
 }
 
