@@ -2,6 +2,7 @@ package be.cegeka.orders.order.domain.orders;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "ORDERS")

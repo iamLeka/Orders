@@ -17,6 +17,8 @@ public class Item {
     private String description;
     @Column (name = "PRICE")
     private BigDecimal price;
+    @Column (name = "STOCK")
+    private int stock;
 
     public Item() {
     }
@@ -41,5 +43,9 @@ public class Item {
 
     public int getId() {
         return id;
+    }
+
+    public int getStock() {
+        return stock;
     }
 }
