@@ -55,7 +55,7 @@ jacocoTestCoverageVerification {
             includes = ['be.cegeka.orders.order.domain.*']
             limit {
                 counter = 'COMPLEXITY'
-                minimum = 0.7
+                minimum = 0.6
             }
         }
     }
