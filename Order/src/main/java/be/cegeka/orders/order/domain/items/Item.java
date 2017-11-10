@@ -38,4 +38,8 @@ public class Item {
     public BigDecimal getPrice() {
         return price;
     }
+
+    public int getId() {
+        return id;
+    }
 }
