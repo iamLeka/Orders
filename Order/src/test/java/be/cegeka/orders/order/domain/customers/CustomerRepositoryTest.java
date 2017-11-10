@@ -16,12 +16,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = OrderApplication.class)
-@Transactional
+@Transactional // reset situatie na elke test
 public class CustomerRepositoryTest {
 
     @PersistenceContext
@@ -30,25 +32,35 @@ public class CustomerRepositoryTest {
     @Inject
     private CustomerRepository customerRepository;
 
-
-    private Customer seppe, johan;
-
-    @Before
-    public void setup() {
-        seppe = new Customer("Astarozna","Bubba","piemelboy69@Hotmale.USSR","rode plein 2","797204");
-        johan = new Customer("Cruyff","Beznik","piemelboy70@Hotmale.USSR","rode plein 2b","797204");
-
+    @Test
+    public void getAllShouldReturnAll() throws Exception {
+        //GIVEN
+        Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
+        Customer johan = new Customer("Cruyff", "Beznik", "piemelboy70@Hotmale.USSR", "rode plein 2b", "797204");
         entityManager.persist(seppe);
         entityManager.persist(johan);
+
+        //WHEN
+        List<Customer> allPersistedCustomers = customerRepository.getAll();
+
+        //THEN
+        assertThat(allPersistedCustomers).contains(seppe, johan);
     }
 
     @Test
-    public void getAllShouldReturnAll() throws Exception {
-        assertThat(customerRepository.getAll()).contains(seppe, johan);
+    public void addCustomer_shouldLetGetAllGetOnlyThatCustomer() throws Exception {
+//        GIVEN
+        Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
+
+//        WHEN
+        customerRepository.addCustomer(seppe);
+
+//        THEN
+        assertThat(customerRepository.getAll()).containsOnly(seppe);
     }
 
-    @After
-    public void cleanDatabase(){
-        entityManager.clear();
-    }
+//    @After                            Overbodig(?) als @Transactional gebruikt wordt, tests blijven werken
+//    public void cleanDatabase() {
+//        entityManager.clear();
+//    }
 }
