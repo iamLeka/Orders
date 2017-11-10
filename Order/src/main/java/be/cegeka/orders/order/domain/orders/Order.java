@@ -17,7 +17,9 @@ public class Order {
     private int id;
     @Column(name = "ORDER_DATE")
     private Date orderDate;
-
+    @OneToMany
+    @JoinColumn(name = "ORDER_ID")
+    private List<OrderItem> orderItem;
 
 
     public Order(Date orderDate) {
@@ -34,5 +36,7 @@ public class Order {
     public Date getOrder_date() {
         return orderDate;
     }
+
+
 
 }
