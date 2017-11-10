@@ -24,25 +24,25 @@ public class CustomerTest {
 
     }
 
-    @Test
+//    @Test
+//    public void aCustomer_isNotEqualToNotACustomer() throws Exception {
+//
+//    }
+
+        @Test
     public void aCustomer_isNotEqualToNotACustomer() throws Exception {
         Assertions.assertThat(testCustomer).isNotEqualTo(new Object());
     }
-
+//
     @Test
     public void aCustomer_isEqualToItself() throws Exception {
         Assertions.assertThat(testCustomer).isEqualTo(testCustomer);
     }
-
+//
     @Test
-    public void equals_CustomerWithSameIdLastNameFirstNameEmailAddressPhone_isTrue() throws Exception {
+    public void equals_CustomerWithSameId_isTrue() throws Exception {
         Customer testCustomer2 = aCustomer()
                 .withID(15)
-                .withLastName("Babush")
-                .withFirstName("Ka")
-                .withEmail("omasaandetop@senioren.net")
-                .withAddress("home zooeneschein")
-                .withPhone("geen, alleen gele briefkaarten")
                 .build();
         assertThat(testCustomer).isEqualTo(testCustomer2);
     }
@@ -56,11 +56,6 @@ public class CustomerTest {
     public void equals_ObjectWithOtherId_isFalse() throws Exception {
         Customer testCustomer2 = aCustomer()
                 .withID(25)
-                .withLastName("Babush")
-                .withFirstName("Ka")
-                .withEmail("omasaandetop@senioren.net")
-                .withAddress("home zooeneschein")
-                .withPhone("geen, alleen gele briefkaarten")
                 .build();
         assertThat(testCustomer).isNotEqualTo(testCustomer2);
     }
