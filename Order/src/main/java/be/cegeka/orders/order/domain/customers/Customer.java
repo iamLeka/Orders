@@ -1,5 +1,7 @@
 package be.cegeka.orders.order.domain.customers;
 
+import be.cegeka.orders.order.domain.orders.Order;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -21,9 +23,8 @@ public class Customer {
     private String address;
     @Column(name = "PHONE")
     private String phone;
-
     @OneToMany
-    @JoinColumn (name ="order_id")
+    @JoinColumn(name="CUSTOMER_ID")
     private List<Order> orderList;
 
     private Customer() {
@@ -59,5 +60,35 @@ public class Customer {
 
     public int getId() {
         return id;
+    }
+
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Customer customer = (Customer) o;
+
+        if (id != customer.id) return false;
+        if (lastName != null ? !lastName.equals(customer.lastName) : customer.lastName != null) return false;
+        if (firstName != null ? !firstName.equals(customer.firstName) : customer.firstName != null) return false;
+        if (email != null ? !email.equals(customer.email) : customer.email != null) return false;
+        if (address != null ? !address.equals(customer.address) : customer.address != null) return false;
+        return phone != null ? phone.equals(customer.phone) : customer.phone == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (phone != null ? phone.hashCode() : 0);
+        return result;
     }
 }
