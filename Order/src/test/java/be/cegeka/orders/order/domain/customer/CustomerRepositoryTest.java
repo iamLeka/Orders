@@ -1,10 +1,6 @@
-package be.cegeka.orders.order.domain.customers;
+package be.cegeka.orders.order.domain.customer;
 
 import be.cegeka.orders.order.OrderApplication;
-import org.assertj.core.api.Assertions;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -41,10 +37,10 @@ public class CustomerRepositoryTest {
         entityManager.persist(johan);
 
         //WHEN
-        List<Customer> allPersistedCustomers = customerRepository.getAll();
+        List<Customer> allPersistedCustomer = customerRepository.getAll();
 
         //THEN
-        assertThat(allPersistedCustomers).contains(seppe, johan);
+        assertThat(allPersistedCustomer).contains(seppe, johan);
     }
 
     @Test

@@ -1,4 +1,4 @@
-package be.cegeka.orders.order.domain.customers;
+package be.cegeka.orders.order.domain.customer;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -7,8 +7,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
-
-import static org.junit.Assert.*;
 
 public class CustomerServiceTest {
 

@@ -27,7 +27,8 @@ public class ItemServiceTest {
 
     @Test
     public void addItemShouldCallItemRepository() throws Exception {
-        itemService.addItem("Shizzle", "Something suspicious", BigDecimal.valueOf(100.5));
+        Item item = new Item("Shizzle", "Something suspicious", BigDecimal.valueOf(100.5));
+        itemService.addItem(item);
         verify(itemRepository).addItem(Mockito.refEq(new Item("Shizzle", "Something suspicious", BigDecimal.valueOf(100.5))));
     }
 }

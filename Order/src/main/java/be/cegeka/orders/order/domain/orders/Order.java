@@ -1,10 +1,7 @@
 package be.cegeka.orders.order.domain.orders;
 
-import be.cegeka.orders.order.domain.customers.Customer;
-
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "ORDERS")
