@@ -27,7 +27,7 @@ public class ItemControllerTest {
 
     @Test
     public void whenAddingItem_shouldActivateCorrespondingMethod() throws Exception {
-        itemController.addItem("Red Vodka", "Special Vodka", BigDecimal.valueOf(15.00));
+        itemController.addItem("Red Vodka", "Special Vodka", 15.00);
         verify(itemService).addItem("Red Vodka", "Special Vodka", BigDecimal.valueOf(15.00));
     }
 }
