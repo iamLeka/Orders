@@ -1,6 +1,8 @@
 package be.cegeka.orders.order.domain.customer;
 
 import be.cegeka.orders.order.OrderApplication;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -28,6 +30,11 @@ public class CustomerRepositoryTest {
     @Inject
     private CustomerRepository customerRepository;
 
+    @Before
+    public void cleanDatabase() {
+        entityManager.clear();
+    }
+
     @Test
     public void getAllShouldReturnAll() throws Exception {
         //GIVEN
@@ -40,11 +47,11 @@ public class CustomerRepositoryTest {
         List<Customer> allPersistedCustomer = customerRepository.getAll();
 
         //THEN
-        assertThat(allPersistedCustomer).contains(seppe, johan);
+        assertThat(allPersistedCustomer).containsExactly(seppe, johan);
     }
 
     @Test
-    public void addCustomer_shouldLetGetAllGetOnlyThatCustomer() throws Exception {
+    public void addOneCustomer_shouldLetGetAllGetOnlyThatCustomer() throws Exception {
 //        GIVEN
         Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
 
@@ -55,8 +62,19 @@ public class CustomerRepositoryTest {
         assertThat(customerRepository.getAll()).containsOnly(seppe);
     }
 
-//    @After                            Overbodig(?) als @Transactional gebruikt wordt, tests blijven werken
-//    public void cleanDatabase() {
-//        entityManager.clear();
-//    }
+    @Test
+    public void addTwoCustomers_shouldLetGetAllGetOnlyThoseCustomers() throws Exception {
+//        GIVEN
+        Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
+        Customer johan = new Customer("Cruyff", "Beznik", "piemelboy70@Hotmale.USSR", "rode plein 2b", "797204");
+
+
+//        WHEN
+        customerRepository.addCustomer(seppe);
+        customerRepository.addCustomer(johan);
+
+//        THEN
+        assertThat(customerRepository.getAll()).containsExactlyInAnyOrder(seppe,johan);
+    }
+
 }

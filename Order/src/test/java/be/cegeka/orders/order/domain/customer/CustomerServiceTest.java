@@ -8,6 +8,8 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
+import static org.mockito.Mockito.verify;
+
 public class CustomerServiceTest {
 
     @Rule
@@ -22,6 +24,12 @@ public class CustomerServiceTest {
     @Test
     public void addCustomerIsCalled_shouldCallCorrespondingMethodInRepository() throws Exception {
         customerService.addCustomer("verhaeghe", "gerard", "gerardke@gmail.com", "kerkstraat 21", "1245");
-        Mockito.verify(customerRepository).addCustomer(new Customer ("verhaeghe", "gerard", "gerardke@gmail.com", "kerkstraat 21", "1245"));
+        verify(customerRepository).addCustomer(new Customer ("verhaeghe", "gerard", "gerardke@gmail.com", "kerkstraat 21", "1245"));
+    }
+
+    @Test
+    public void getAll_shouldGetAllInCustomerRepository() throws Exception {
+        customerService.getAll();
+        verify(customerRepository).getAll();
     }
 }
