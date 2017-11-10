@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/item")
@@ -17,8 +18,7 @@ public class ItemController {
     private ItemService itemService;
 
     @PostMapping(consumes = "application/json", produces = "application/json")
-    public Item addItem(@RequestBody Item item) {
-        itemService.addItem(item);
-        return item;
+    public List<Item> addItem(@RequestBody List<Item> items) {
+        return itemService.addItem(items);
     }
 }

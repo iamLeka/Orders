@@ -10,8 +10,11 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.MockitoRule;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 public class ItemServiceTest {
@@ -27,8 +30,15 @@ public class ItemServiceTest {
 
     @Test
     public void addItemShouldCallItemRepository() throws Exception {
-        Item item = new Item("Shizzle", "Something suspicious", BigDecimal.valueOf(100.5));
-        itemService.addItem(item);
-        verify(itemRepository).addItem(Mockito.refEq(new Item("Shizzle", "Something suspicious", BigDecimal.valueOf(100.5))));
+        Item item1 = new Item("Red Vodka", "Special Vodka", BigDecimal.valueOf(15.00));
+        Item item2 = new Item("Blue Vodka", "Special Vodka", BigDecimal.valueOf(15.00));
+        List<Item> items = new ArrayList<>();
+
+        items.add(item1);
+        items.add(item2);
+
+        itemService.addItem(items);
+        verify(itemRepository).addItem(Mockito.refEq(new Item("Red Vodka", "Special Vodka", BigDecimal.valueOf(15.00))));
+        verify(itemRepository).addItem(Mockito.refEq(new Item("Blue Vodka", "Special Vodka", BigDecimal.valueOf(15.00))));
     }
 }
