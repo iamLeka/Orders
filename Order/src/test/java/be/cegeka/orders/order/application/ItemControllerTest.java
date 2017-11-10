@@ -1,5 +1,6 @@
 package be.cegeka.orders.order.application;
 
+import be.cegeka.orders.order.domain.items.Item;
 import be.cegeka.orders.order.domain.items.ItemService;
 import org.junit.Rule;
 import org.junit.Test;
@@ -27,7 +28,8 @@ public class ItemControllerTest {
 
     @Test
     public void whenAddingItem_shouldActivateCorrespondingMethod() throws Exception {
-        itemController.addItem("Red Vodka", "Special Vodka", 15.00);
-        verify(itemService).addItem("Red Vodka", "Special Vodka", BigDecimal.valueOf(15.00));
+        Item item = new Item("Red Vodka", "Special Vodka", BigDecimal.valueOf(15.00));
+        itemController.addItem(item);
+        verify(itemService).addItem(item);
     }
 }

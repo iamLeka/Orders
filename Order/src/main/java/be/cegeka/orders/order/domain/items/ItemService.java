@@ -10,7 +10,7 @@ public class ItemService {
     @Inject
     private ItemRepository itemRepository;
 
-    public void addItem(String name, String description, BigDecimal price) {
-        itemRepository.addItem(new Item(name, description, price));
+    public void addItem(Item item) {
+        itemRepository.addItem(item);
     }
 }
