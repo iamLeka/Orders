@@ -1,7 +1,6 @@
 package be.cegeka.orders.order.application;
 
-import be.cegeka.orders.order.domain.customers.Customer;
-import be.cegeka.orders.order.domain.customers.CustomerService;
+import be.cegeka.orders.order.domain.customer.CustomerService;
 import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -9,11 +8,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
-
-import javax.inject.Inject;
-
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.when;
 
 public class CustomerControllerTest {
     @Rule

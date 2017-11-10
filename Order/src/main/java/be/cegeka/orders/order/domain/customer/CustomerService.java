@@ -1,4 +1,4 @@
-package be.cegeka.orders.order.domain.customers;
+package be.cegeka.orders.order.domain.customer;
 
 import javax.inject.Inject;
 import javax.inject.Named;

@@ -1,4 +1,4 @@
-package be.cegeka.orders.order.domain.customers;
+package be.cegeka.orders.order.domain.customer;
 
 
 import org.springframework.test.util.ReflectionTestUtils;

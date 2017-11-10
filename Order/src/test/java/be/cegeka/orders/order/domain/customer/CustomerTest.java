@@ -1,12 +1,11 @@
-package be.cegeka.orders.order.domain.customers;
+package be.cegeka.orders.order.domain.customer;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
-import static be.cegeka.orders.order.domain.customers.CustomerTestBuilder.aCustomer;
+import static be.cegeka.orders.order.domain.customer.CustomerTestBuilder.aCustomer;
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.Assert.*;
 
 public class CustomerTest {
     private Customer testCustomer;

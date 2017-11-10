@@ -1,4 +1,4 @@
-package be.cegeka.orders.order.domain.customers;
+package be.cegeka.orders.order.domain.customer;
 
 import be.cegeka.orders.order.domain.orders.Order;
 
@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "CUSTOMERS")
+@Table(name = "CUSTOMER")
 public class Customer {
 
     @Id
