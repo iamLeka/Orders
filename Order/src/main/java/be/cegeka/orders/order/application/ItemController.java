@@ -16,7 +16,7 @@ public class ItemController {
     @Inject
     private ItemService itemService;
 
-    @PostMapping(path = "/add", consumes = "application/json", produces = "application/json")
+    @PostMapping(consumes = "application/json", produces = "application/json")
     public Item addItem(@RequestBody Item item) {
         itemService.addItem(item);
         return item;
