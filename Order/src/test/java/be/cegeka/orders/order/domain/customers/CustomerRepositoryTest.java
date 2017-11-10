@@ -29,10 +29,12 @@ public class CustomerRepositoryTest {
 
     @Inject
     private CustomerRepository customerRepository;
+
+
     private Customer seppe, johan;
 
     @Before
-    public void setupDatabase() {
+    public void setup() {
         seppe = new Customer("Astarozna","Bubba","piemelboy69@Hotmale.USSR","rode plein 2","797204");
         johan = new Customer("Cruyff","Beznik","piemelboy70@Hotmale.USSR","rode plein 2b","797204");
 

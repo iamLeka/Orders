@@ -1,0 +1,8 @@
+subprojects {
+
+    apply plugin: 'java'
+
+    test {
+        systemProperty("spring.profiles.active", project.properties.get("springProfiles"))
+    }
+}

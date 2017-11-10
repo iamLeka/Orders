@@ -12,7 +12,6 @@ plugins {
     id "org.flywaydb.flyway" version "4.2.0"
 }
 
-apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'idea'
@@ -48,6 +47,14 @@ jacocoTestCoverageVerification {
             includes = ['be.cegeka.orders.*']
             limit {
                 counter = 'BRANCH'
+                minimum = 0.7
+            }
+        }
+        rule {
+            element = 'PACKAGE'
+            includes = ['be.cegeka.orders.order.domain.*']
+            limit {
+                counter = 'COMPLEXITY'
                 minimum = 0.7
             }
         }
