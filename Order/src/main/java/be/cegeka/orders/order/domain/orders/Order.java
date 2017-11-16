@@ -16,12 +16,12 @@ public class Order {
     @Column(name = "ORDER_DATE")
     private Date orderDate;
     @OneToMany
-    @JoinColumn(name = "ORDER_ID")
-    private List<OrderItem> orderItem;
+    @JoinColumn(name = "ORDER_ID", nullable = false)
+    private List<OrderItem> orderItems;
 
-
-    public Order(Date orderDate) {
+    public Order(Date orderDate, List<OrderItem> orderItems) {
         this.orderDate = orderDate;
+        this.orderItems = orderItems;
     }
 
     public Order() {
@@ -35,6 +35,11 @@ public class Order {
         return orderDate;
     }
 
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
 
-
+    public Date getOrderDate() {
+        return orderDate;
+    }
 }

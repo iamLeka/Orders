@@ -1,9 +1,13 @@
 package be.cegeka.orders.order.domain.customer;
 
 import be.cegeka.orders.order.OrderApplication;
+import be.cegeka.orders.order.domain.orders.Order;
+import be.cegeka.orders.order.domain.orders.OrderItem;
+import jersey.repackaged.com.google.common.collect.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -12,14 +16,16 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+import java.sql.Date;
 import java.util.List;
 
+import static jersey.repackaged.com.google.common.collect.Lists.newArrayList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = OrderApplication.class)
-@Transactional // reset situatie na elke test
+@Transactional
 public class CustomerRepositoryTest {
 
     @PersistenceContext
@@ -55,7 +61,16 @@ public class CustomerRepositoryTest {
         assertThat(customerRepository.getAll()).containsOnly(seppe);
     }
 
-//    @After                            Overbodig(?) als @Transactional gebruikt wordt, tests blijven werken
+    @Test
+    public void name() throws Exception {
+        Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
+        entityManager.persist(seppe);
+
+        seppe.addOrder(new Order(new Date(1,1,2018), newArrayList()));
+        entityManager.persist(seppe);
+    }
+
+    //    @After                            Overbodig(?) als @Transactional gebruikt wordt, tests blijven werken
 //    public void cleanDatabase() {
 //        entityManager.clear();
 //    }

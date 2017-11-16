@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+import java.sql.Date;
 
 @RestController
 @RequestMapping(path = "/order")
@@ -14,8 +15,9 @@ public class OrderController {
     @Inject
     private OrderService orderService;
 
-    @PostMapping(path = "/putInOrder", consumes = application / json)
-    public void putInOrder( @RequestBody Order order) {
-        orderService.putInOrder(order);
+    @PostMapping(path = "/forcustomer/{customerid}", consumes = "application/json")
+    public Order putInOrder(@RequestBody Order order, @PathVariable(value = "customerid") int customerid) {
+        orderService.putInOrder(customerid,order);
+        return order;
     }
 }

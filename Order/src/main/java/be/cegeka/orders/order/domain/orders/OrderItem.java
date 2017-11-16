@@ -16,4 +16,11 @@ public class OrderItem {
     @JoinColumn(name = "ITEM_ID")
     private Item item;
 
+    public Item getItem() {
+        return item;
+    }
+
+    public int getId() {
+        return id;
+    }
 }
