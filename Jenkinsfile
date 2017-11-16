@@ -33,6 +33,12 @@ pipeline {
                 }
             }
         }
+
+        stage('ArchiveArtifacts'){
+            steps {
+                archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
+            }
+        }
     }
 
     post {
