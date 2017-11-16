@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat './gradlew.bat clean testClasses'
+                bat './gradlew.bat war'
             }
         }
         stage('cleanDb') {
