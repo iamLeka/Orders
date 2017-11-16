@@ -4,6 +4,8 @@ import be.cegeka.orders.order.OrderApplication;
 import be.cegeka.orders.order.domain.orders.Order;
 import be.cegeka.orders.order.domain.orders.OrderItem;
 import jersey.repackaged.com.google.common.collect.Lists;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,6 +36,11 @@ public class CustomerRepositoryTest {
     @Inject
     private CustomerRepository customerRepository;
 
+    @Before
+    public void cleanDatabase() {
+        entityManager.clear();
+    }
+
     @Test
     public void getAllShouldReturnAll() throws Exception {
         //GIVEN
@@ -50,7 +57,7 @@ public class CustomerRepositoryTest {
     }
 
     @Test
-    public void addCustomer_shouldLetGetAllGetOnlyThatCustomer() throws Exception {
+    public void addOneCustomer_shouldLetGetAllGetOnlyThatCustomer() throws Exception {
 //        GIVEN
         Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
 
@@ -62,16 +69,18 @@ public class CustomerRepositoryTest {
     }
 
     @Test
-    public void name() throws Exception {
+    public void addTwoCustomers_shouldLetGetAllGetOnlyThoseCustomers() throws Exception {
+//        GIVEN
         Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
-        entityManager.persist(seppe);
+        Customer johan = new Customer("Cruyff", "Beznik", "piemelboy70@Hotmale.USSR", "rode plein 2b", "797204");
 
-        seppe.addOrder(new Order(new Date(1,1,2018), newArrayList()));
-        entityManager.persist(seppe);
+
+//        WHEN
+        customerRepository.addCustomer(seppe);
+        customerRepository.addCustomer(johan);
+
+//        THEN
+        assertThat(customerRepository.getAll()).containsExactlyInAnyOrder(seppe,johan);
     }
 
-    //    @After                            Overbodig(?) als @Transactional gebruikt wordt, tests blijven werken
-//    public void cleanDatabase() {
-//        entityManager.clear();
-//    }
 }

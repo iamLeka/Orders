@@ -21,8 +21,15 @@ public class CustomerControllerTest {
 
 
     @Test
-    public void IfAddCustomerIsCalled_ShouldCallCustomerServiceAddCustomer() throws Exception {
+    public void ifAddCustomerIsCalled_ShouldCallCustomerServiceAddCustomer() throws Exception {
         customerController.addCustomer("L", "H", "g", "E", "P");
         Mockito.verify(customerService).addCustomer("L", "H", "g", "E", "P");
+    }
+
+    @Test
+    public void getAll_shouldCallGetAllInService() throws Exception {
+        customerController.getAll();
+        Mockito.verify(customerService).getAll();
+
     }
 }

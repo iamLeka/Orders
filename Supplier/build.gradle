@@ -16,6 +16,7 @@ apply plugin: 'maven'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'idea'
 apply plugin: 'jacoco'
+apply plugin: 'war'
 
 group = 'be.cegeka.orders.supplier'
 version = '1.0.0'
@@ -32,14 +33,6 @@ idea {
     }
 }
 
-jar {
-    baseName = 'supplier'
-    version = version
-    manifest {
-        attributes 'Implementation-Version': version
-    }
-}
-
 jacocoTestCoverageVerification {
     violationRules {
         rule {
@@ -50,11 +43,36 @@ jacocoTestCoverageVerification {
                 minimum = 0.7
             }
         }
+        rule {
+            element = 'PACKAGE'
+            includes = ['be.cegeka.orders.order.domain.*']
+            limit {
+                counter = 'COMPLEXITY'
+                minimum = 0.5
+            }
+        }
     }
 }
 
 repositories {
     mavenCentral()
+}
+
+configurations {
+    providedRuntime
+}
+
+jar {
+    baseName = 'supplier'
+    version =  version
+}
+
+war {
+    baseName = 'supplier'
+    version = version
+    manifest {
+        attributes 'Implementation-Version': version
+    }
 }
 
 dependencies {
@@ -63,6 +81,8 @@ dependencies {
     }
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     compile("mysql:mysql-connector-java")
     compile 'org.glassfish.jersey.core:jersey-client:2.22.2'
     compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.22.2'

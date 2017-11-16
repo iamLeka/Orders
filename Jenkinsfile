@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat './gradlew.bat clean testClasses'
+                bat './gradlew.bat war'
             }
         }
         stage('cleanDb') {
@@ -31,6 +32,12 @@ pipeline {
                         currentBuild.result='UNSTABLE'
                     }
                 }
+            }
+        }
+
+        stage('ArchiveArtifacts'){
+            steps {
+                archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
             }
         }
     }

@@ -1,21 +1,20 @@
 package be.cegeka.orders.order.application;
 
 
+import be.cegeka.orders.order.domain.customer.Customer;
 import be.cegeka.orders.order.domain.customer.CustomerService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/customer")
 @Transactional
 public class CustomerController {
     @Inject
-    private CustomerService customerservice;
+    private CustomerService customerService;
 
 
     @PostMapping(path = "/addCustomer")
@@ -26,6 +25,11 @@ public class CustomerController {
             @RequestParam(value = "address", required = true) String address,
             @RequestParam(value = "phone", required = true) String phone
     ) {
-        customerservice.addCustomer(lastname, firstName, email, address, phone);
+        customerService.addCustomer(lastname, firstName, email, address, phone);
+    }
+
+    @GetMapping(path = "/getAll")
+    public List<Customer> getAll(){
+        return customerService.getAll();
     }
 }
