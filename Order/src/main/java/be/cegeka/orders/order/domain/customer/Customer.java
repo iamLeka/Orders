@@ -3,6 +3,7 @@ package be.cegeka.orders.order.domain.customer;
 import be.cegeka.orders.order.domain.orders.Order;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,9 +24,9 @@ public class Customer {
     private String address;
     @Column(name = "PHONE")
     private String phone;
-    @OneToMany
-    @JoinColumn(name="CUSTOMER_ID")
-    private List<Order> orderList;
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name="CUSTOMER_ID", nullable = false)
+    private List<Order> orderList = new ArrayList<>();
 
     private Customer() {
     }
@@ -81,5 +82,9 @@ public class Customer {
         return id;
     }
 
+
+    public void addOrder(Order order) {
+        orderList.add(order);
+    }
 
 }

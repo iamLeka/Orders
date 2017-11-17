@@ -1,0 +1,3 @@
+ALTER TABLE ITEM
+ADD STOCK int
+;

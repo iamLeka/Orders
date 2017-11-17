@@ -18,4 +18,8 @@ public class CustomerRepository {
     public void addCustomer(Customer customer) {
         entityManager.persist(customer);
     }
+
+    public Customer getCustomerById(int customerid) {
+        return entityManager.find(Customer.class,customerid);
+    }
 }
