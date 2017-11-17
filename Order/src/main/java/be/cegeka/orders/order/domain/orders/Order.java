@@ -11,7 +11,7 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="ORDER_ID")
+    @Column(name = "ORDER_ID")
     private int id;
     @Column(name = "ORDER_DATE")
     private Date orderDate;
@@ -29,10 +29,6 @@ public class Order {
 
     public int getId() {
         return id;
-    }
-
-    public Date getOrder_date() {
-        return orderDate;
     }
 
     public List<OrderItem> getOrderItems() {
