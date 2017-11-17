@@ -1,7 +1,9 @@
-package be.cegeka.orders.supplier.domain.suppliers;
+package be.cegeka.orders.supplier.domain;
 
 import org.joda.time.DateTime;
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "EXTERNAL_ORDERS")
@@ -10,10 +12,10 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "CUSTOMER_ID")
-    private String customerId;
+    @Column(name = "CUSTOMERID")
+    private int customerId;
     @Column(name = "ORDERDATETIME")
-    private DateTime orderDateTime;
+    private Timestamp orderDateTime;
     @Column(name = "ITEM")
     private String itemName;
     @Column(name = "AMOUNT")
@@ -22,9 +24,9 @@ public class Order {
     public Order() {
     }
 
-    public Order(String customerId, DateTime orderDateTime, String itemName, int amount) {
+    public Order(int customerId,String itemName, int amount) {
         this.customerId = customerId;
-        this.orderDateTime = orderDateTime;
+        this.orderDateTime = Timestamp.valueOf(LocalDateTime.now());
         this.itemName = itemName;
         this.amount = amount;
     }
@@ -33,11 +35,11 @@ public class Order {
         return id;
     }
 
-    public String getCustomerId() {
+    public int getCustomerId() {
         return customerId;
     }
 
-    public DateTime getOrderDateTime() {
+    public Timestamp getOrderDateTime() {
         return orderDateTime;
     }
 

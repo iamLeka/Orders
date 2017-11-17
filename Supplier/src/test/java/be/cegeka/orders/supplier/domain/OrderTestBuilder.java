@@ -1,24 +1,24 @@
-package be.cegeka.orders.supplier.domain.suppliers;
+package be.cegeka.orders.supplier.domain;
 
-import org.joda.time.DateTime;
+import org.joda.time.LocalDateTime;
 import org.springframework.test.util.ReflectionTestUtils;
 
 public class OrderTestBuilder {
     private int id;
-    private String customerId;
+    private int customerId;
     private int amount;
-    private DateTime orderDateTime;
+    private LocalDateTime orderDateTime;
     private String item;
 
     public static OrderTestBuilder aOrder() {
         return new OrderTestBuilder()
-                .withCustomerId("qdfjhsd")
+                .withCustomerId(10)
                 .withAmount(5)
-                .withOrderDateTime(DateTime.now())
+                .withOrderDateTime(LocalDateTime.now())
                 .withItem("appel");
     }
 
-    public OrderTestBuilder withCustomerId(String customerId) {
+    public OrderTestBuilder withCustomerId(int customerId) {
         this.customerId = customerId;
         return this;
     }
@@ -28,7 +28,7 @@ public class OrderTestBuilder {
         return this;
     }
 
-    public OrderTestBuilder withOrderDateTime(DateTime orderDateTime) {
+    public OrderTestBuilder withOrderDateTime(LocalDateTime orderDateTime) {
         this.orderDateTime = orderDateTime;
         return this;
     }
@@ -38,7 +38,7 @@ public class OrderTestBuilder {
         return this;
     }
     public Order build(){
-        Order order = new Order(customerId,orderDateTime,item,amount);
+        Order order = new Order(customerId,item,amount);
         ReflectionTestUtils.setField(order, "id", id);
         return order;
     }
