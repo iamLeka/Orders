@@ -1,15 +1,13 @@
 package be.cegeka.orders.order.domain.customer;
 
 import be.cegeka.orders.order.OrderApplication;
+import be.cegeka.orders.order.domain.items.Item;
 import be.cegeka.orders.order.domain.orders.Order;
 import be.cegeka.orders.order.domain.orders.OrderItem;
-import jersey.repackaged.com.google.common.collect.Lists;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -17,11 +15,13 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-
+import java.math.BigDecimal;
 import java.sql.Date;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
-import static jersey.repackaged.com.google.common.collect.Lists.newArrayList;
+import static be.cegeka.orders.order.domain.customer.CustomerTestBuilder.aCustomer;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
@@ -83,4 +83,33 @@ public class CustomerRepositoryTest {
         assertThat(customerRepository.getAll()).containsExactlyInAnyOrder(seppe,johan);
     }
 
+    @Test
+    public void getPreviousOrders_shouldCallOnRepository() throws Exception {
+        Customer domien = aCustomer()
+                .withLastName("Lemmens")
+                .withFirstName("Domien")
+                .withEmail("blabla@gmail.com")
+                .withAddress("kerkstraat 25, moskou")
+                .withPhone("neen")
+                .build();
+        entityManager.persist(domien);
+
+        OrderItem item = new OrderItem();
+        OrderItem item2 = new OrderItem();
+        OrderItem item3 = new OrderItem();
+
+        List<OrderItem> itemTestList = new ArrayList<>();
+        itemTestList.add(item);
+        itemTestList.add(item2);
+        itemTestList.add(item3);
+
+        Order order1 = new Order(LocalDate.now(), itemTestList);
+
+        domien.addOrder(order1);
+
+        customerRepository.getAllOrdersFromCustomer(domien.getId());
+
+        assertThat(customerRepository.getAllOrdersFromCustomer(domien.getId())).contains(order1);
+
+    }
 }
