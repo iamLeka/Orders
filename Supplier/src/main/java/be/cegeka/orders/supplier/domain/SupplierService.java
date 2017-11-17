@@ -8,8 +8,17 @@ import java.util.List;
 public class SupplierService {
     @Inject
     private SupplierRepository supplierRepository;
-    public void placeOrder(int customerId, String item, int amount) {
-        supplierRepository.placeOrder(new Order(customerId,item,amount));
+    @Inject
+    private OrderMapper orderMapper;
+//    public void placeOrder(int customerId, String item, int amount) {
+//        supplierRepository.placeOrder(new Order(customerId,item,amount));
+//
+//    }
+
+    public Order placeOrder(OrderDTO orderDTO) {
+        Order order=orderMapper.makeOrderFromOrderDTO(orderDTO);
+        supplierRepository.placeOrder(order);
+        return order;
 
     }
 
