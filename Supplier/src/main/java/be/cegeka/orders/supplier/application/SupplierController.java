@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/supplier")
@@ -27,7 +28,7 @@ public class SupplierController {
     }
 
     @GetMapping
-    public void getAllOrders() {
-        supplierService.getAllOrders();
+    public List<Order> getAllOrders() {
+        return supplierService.getAllOrders();
     }
 }
