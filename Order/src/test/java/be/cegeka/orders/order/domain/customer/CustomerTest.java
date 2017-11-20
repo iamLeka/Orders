@@ -1,11 +1,20 @@
 package be.cegeka.orders.order.domain.customer;
 
+import be.cegeka.orders.order.domain.orders.Order;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
+
+
 import static be.cegeka.orders.order.domain.customer.CustomerTestBuilder.aCustomer;
 import static org.assertj.core.api.Assertions.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class CustomerTest {
     private Customer testCustomer;
@@ -57,5 +66,12 @@ public class CustomerTest {
                 .withID(25)
                 .build();
         assertThat(testCustomer).isNotEqualTo(testCustomer2);
+    }
+
+    @Test
+    public void addOrder_onACustomer() throws Exception {
+        Order order = new Order(Date.valueOf(LocalDate.now()));
+        testCustomer.addOrder(order);
+        assertThat(testCustomer.getOrderList()).contains(order);
     }
 }
