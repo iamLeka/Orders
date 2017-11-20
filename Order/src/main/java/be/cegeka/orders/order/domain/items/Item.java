@@ -29,6 +29,14 @@ public class Item {
         this.price = price;
     }
 
+    public Item(int id, String name, String description, BigDecimal price, int stock) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.stock = stock;
+    }
+
     public String getName() {
         return name;
     }

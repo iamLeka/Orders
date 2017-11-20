@@ -32,16 +32,41 @@ public class OrderItemFactoryTest {
     @Test
     public void givenItemDto_ShouldReturnOrderItem() throws Exception {
         //GIVEN
-        ItemDto itemDto = new ItemDto(1,5);
-        Item item = new Item("Bier","Jammie", BigDecimal.valueOf(2));
+        ItemDto itemDto = new ItemDto(1, 5);
+        Item item = new Item("Bier", "Jammie", BigDecimal.valueOf(2));
 
         //WHEN
         when(itemRepository.getItemById(1)).thenReturn(item);
 
         OrderItem actualOrderItem = orderItemFactory.makeOrderItemFromDto(itemDto);
-        OrderItem expectedOrderItem = new OrderItem(item,5, LocalDate.now().plusWeeks(1),BigDecimal.valueOf(10));
+        OrderItem expectedOrderItem = new OrderItem(item, 5, LocalDate.now().plusWeeks(1), BigDecimal.valueOf(10));
 
         //THEN
         Assertions.assertThat(actualOrderItem).isEqualToComparingFieldByField(expectedOrderItem);
+    }
+
+    @Test
+    public void ifItemInStock_shouldReturnCurrentDatePlusOne() throws Exception {
+        ItemDto itemDto = new ItemDto(1, 4);
+        Item item = new Item(1, "bier", "lekker", BigDecimal.valueOf(1), 5);
+        when(itemRepository.getItemById(1)).thenReturn(item);
+
+        OrderItem actualOrderItem = (orderItemFactory.makeOrderItemFromDto(itemDto));
+        OrderItem expectedOrderItem = (new OrderItem(item, 4, LocalDate.now().plusDays(1), BigDecimal.valueOf(4)));
+
+        Assertions.assertThat(actualOrderItem.getShippingDate()).isEqualTo(expectedOrderItem.getShippingDate());
+    }
+
+
+    @Test
+    public void ifItemNotInStock_shouldReturnCurrentDatePlusSeven() throws Exception {
+        ItemDto itemDto = new ItemDto(1, 8);
+        Item item = new Item(1, "bier", "lekker", BigDecimal.valueOf(1), 5);
+        when(itemRepository.getItemById(1)).thenReturn(item);
+
+        OrderItem actualOrderItem = (orderItemFactory.makeOrderItemFromDto(itemDto));
+        OrderItem expectedOrderItem = (new OrderItem(item, 8, LocalDate.now().plusDays(7), BigDecimal.valueOf(4)));
+
+        Assertions.assertThat(actualOrderItem.getShippingDate()).isEqualTo(expectedOrderItem.getShippingDate());
     }
 }
