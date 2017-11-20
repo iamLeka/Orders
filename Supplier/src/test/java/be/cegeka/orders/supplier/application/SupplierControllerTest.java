@@ -1,6 +1,7 @@
 package be.cegeka.orders.supplier.application;
 
 import be.cegeka.orders.supplier.domain.Order;
+import be.cegeka.orders.supplier.domain.OrderDTO;
 import be.cegeka.orders.supplier.domain.SupplierService;
 import org.junit.Rule;
 import org.junit.Test;
@@ -22,7 +23,7 @@ public class SupplierControllerTest {
 
     @Test
     public void whenPlaceOrderIsCalledSupplierServicePlaceOrderShouldBeCalled() throws Exception {
-        Order order=new Order(10,"testitem",50);
+        OrderDTO order=new OrderDTO(10,"testitem",50);
         supplierController.placeOrder(order);
         Mockito.verify(supplierService).placeOrder(order);
     }

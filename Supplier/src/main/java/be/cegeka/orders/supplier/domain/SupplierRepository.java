@@ -10,8 +10,9 @@ public class SupplierRepository {
     @PersistenceContext
     private EntityManager entityManager;
 
-    public void placeOrder(Order order){
+    public Order placeOrder(Order order){
         entityManager.persist(order);
+        return order;
 
     }
 
