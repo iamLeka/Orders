@@ -1,0 +1,1 @@
+call ./gradlew.bat Supplier:flywayMigrate -P flyway.user=testsupplier -P flyway.password=testsupplier -P flyway.schemas=suppliers_test -P flyway.url=jdbc:mysql://localhost:3306/suppliers_test
