@@ -30,11 +30,13 @@ public class OrderService {
 
     public Order saveOrder(int customerid, List<ItemDto> itemsToOrder){
         Customer customer = customerRepository.getCustomerById(customerid);
+
         Order order = new Order(Date.valueOf(LocalDate.now()));
 
         for (ItemDto itemDto : itemsToOrder) {
             order.addOrderItem(orderItemFactory.makeOrderItemFromDto(itemDto));
         }
+
         customer.addOrder(order);
 
         return order;

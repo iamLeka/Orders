@@ -57,7 +57,7 @@ public class CustomerRepositoryTest {
     }
 
     @Test
-    public void addOneCustomer_shouldLetGetAllGetOnlyThatCustomer() throws Exception {
+    public void addOneCustomer_shouldcontainThatCustomer() throws Exception {
 //        GIVEN
         Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
 
@@ -65,11 +65,11 @@ public class CustomerRepositoryTest {
         customerRepository.addCustomer(seppe);
 
 //        THEN
-        assertThat(customerRepository.getAll()).containsOnly(seppe);
+        assertThat(customerRepository.getAll()).contains(seppe);
     }
 
     @Test
-    public void addTwoCustomers_shouldLetGetAllGetOnlyThoseCustomers() throws Exception {
+    public void addTwoCustomers_shouldContainThoseCustomers() throws Exception {
 //        GIVEN
         Customer seppe = new Customer("Astarozna", "Bubba", "piemelboy69@Hotmale.USSR", "rode plein 2", "797204");
         Customer johan = new Customer("Cruyff", "Beznik", "piemelboy70@Hotmale.USSR", "rode plein 2b", "797204");
@@ -80,7 +80,7 @@ public class CustomerRepositoryTest {
         customerRepository.addCustomer(johan);
 
 //        THEN
-        assertThat(customerRepository.getAll()).containsExactlyInAnyOrder(seppe,johan);
+        assertThat(customerRepository.getAll()).contains(seppe,johan);
     }
 
     @Test
@@ -94,16 +94,20 @@ public class CustomerRepositoryTest {
                 .build();
         entityManager.persist(domien);
 
-        OrderItem item = new OrderItem();
-        OrderItem item2 = new OrderItem();
-        OrderItem item3 = new OrderItem();
+        Item item1 =new Item("wodka","lekker",new BigDecimal(10.50));
+        Item item2 =new Item("banaan","lekker",new BigDecimal(10.50));
+        Item item3 =new Item("rum","lekker",new BigDecimal(10.50));
+
+        OrderItem orderItem1 = new OrderItem(item1,5,LocalDate.now(),item1.getPrice());
+        OrderItem orderItem2 = new OrderItem(item1,5,LocalDate.now(),item1.getPrice());
+        OrderItem orderItem3 = new OrderItem(item1,5,LocalDate.now(),item1.getPrice());
 
         List<OrderItem> itemTestList = new ArrayList<>();
-        itemTestList.add(item);
-        itemTestList.add(item2);
-        itemTestList.add(item3);
+        itemTestList.add(orderItem1);
+        itemTestList.add(orderItem2);
+        itemTestList.add(orderItem3);
 
-        Order order1 = new Order(LocalDate.now(), itemTestList);
+        Order order1 = new Order(Date.valueOf(LocalDate.now()));
 
         domien.addOrder(order1);
 

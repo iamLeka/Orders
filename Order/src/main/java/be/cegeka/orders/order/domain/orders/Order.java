@@ -42,10 +42,6 @@ public class Order {
         return orderItems;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
     public void addOrderItem(OrderItem orderItem) {
         orderItems.add(orderItem);
     }
