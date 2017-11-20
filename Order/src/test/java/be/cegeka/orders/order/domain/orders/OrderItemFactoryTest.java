@@ -87,9 +87,11 @@ public class OrderItemFactoryTest {
 
     @Test
     public void IfOrderedProductNotInStock_ShouldPlaceOrderWithSupplier() throws Exception {
-        ItemDto itemDto = new ItemDto(1, 3);
+        ItemDto itemDto = new ItemDto(1, 7);
         Item item = new Item(1, "bier", "lekker", BigDecimal.valueOf(1), 5);
         when(itemRepository.getItemById(1)).thenReturn(item);
+
+        orderItemFactory.makeOrderItemFromDto(itemDto);
 
         verify(supplierService).postNewOrder("Itchy butthole", item.getName() + " " + itemDto.getAmount());
         //check if order is placed with supplier
