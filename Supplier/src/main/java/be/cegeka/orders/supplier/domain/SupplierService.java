@@ -17,8 +17,7 @@ public class SupplierService {
 
     public Order placeOrder(OrderDTO orderDTO) {
         Order order=orderMapper.makeOrderFromOrderDTO(orderDTO);
-        supplierRepository.placeOrder(order);
-        return order;
+        return supplierRepository.placeOrder(order);
 
     }
 

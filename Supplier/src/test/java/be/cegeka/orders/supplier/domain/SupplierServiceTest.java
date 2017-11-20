@@ -8,8 +8,11 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
+import javax.inject.Inject;
+
 import static org.mockito.ArgumentMatchers.refEq;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class SupplierServiceTest {
     @Rule
@@ -21,11 +24,16 @@ public class SupplierServiceTest {
     @Mock
     private SupplierRepository supplierRepository;
 
+    @Mock
+    private OrderMapper orderMapper;
+
     @Test
     public void whenPlaceOrderIsCalledSupplierRepositoryPlaceOrderShouldBeCalled() throws Exception {
-        Order order=new Order(10,"testitem",50);
-        supplierService.placeOrder(order);
-        verify(supplierRepository).placeOrder(refEq(order));
+        OrderDTO orderdto=new OrderDTO(10,"testitem",50);
+        Order order= orderMapper.makeOrderFromOrderDTO(orderdto);
+        when(supplierService.placeOrder(orderdto)).thenReturn(order);
+        supplierService.placeOrder(orderdto);
+        verify(supplierRepository).placeOrder(order);
 
     }
 
