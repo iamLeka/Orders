@@ -15,6 +15,7 @@ import java.util.List;
 @RequestMapping(path = "/order")
 @Transactional
 public class OrderController {
+
     @Inject
     private OrderService orderService;
 
