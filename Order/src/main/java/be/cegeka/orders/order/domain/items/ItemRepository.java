@@ -14,4 +14,8 @@ public class ItemRepository {
         entityManager.persist(item);
         return item;
     }
+
+    public Item getItemById(int itemId) {
+       return entityManager.find(Item.class,itemId);
+    }
 }
