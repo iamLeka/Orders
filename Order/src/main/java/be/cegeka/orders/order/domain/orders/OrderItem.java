@@ -25,6 +25,9 @@ public class OrderItem {
     @Column(name = "PRICE")
     private BigDecimal itemGroupPrice;
 
+    public OrderItem() {
+    }
+
     public OrderItem(Item item, int amount, LocalDate shippingDate, BigDecimal itemGroupPrice) {
         this.item = item;
         this.amount = amount;
