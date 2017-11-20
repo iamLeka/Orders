@@ -23,8 +23,9 @@ public class SupplierServiceTest {
 
     @Test
     public void whenPlaceOrderIsCalledSupplierRepositoryPlaceOrderShouldBeCalled() throws Exception {
-        supplierService.placeOrder(10,"testitem",50);
-        verify(supplierRepository).placeOrder(refEq(new Order(10,"testitem",50), "orderDateTime"));
+        Order order=new Order(10,"testitem",50);
+        supplierService.placeOrder(order);
+        verify(supplierRepository).placeOrder(refEq(order));
 
     }
 

@@ -24,6 +24,7 @@ public class Order {
     public Order() {
     }
 
+
     public Order(int customerId,String itemName, int amount) {
         this.customerId = customerId;
         this.orderDateTime = Timestamp.valueOf(LocalDateTime.now());
@@ -39,8 +40,8 @@ public class Order {
         return customerId;
     }
 
-    public Timestamp getOrderDateTime() {
-        return orderDateTime;
+    public LocalDateTime getOrderDateTime() {
+        return orderDateTime.toLocalDateTime();
     }
 
     public String getItemName() {
