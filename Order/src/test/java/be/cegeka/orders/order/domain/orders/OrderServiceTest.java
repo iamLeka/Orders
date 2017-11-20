@@ -33,9 +33,6 @@ public class OrderServiceTest {
     public MockitoRule rule = MockitoJUnit.rule();
 
     @Mock
-    private OrderRepository orderRepository;
-
-    @Mock
     private OrderItemFactory orderItemFactory;
 
     @Mock
@@ -43,9 +40,6 @@ public class OrderServiceTest {
 
     @Mock
     private CustomerRepository customerRepository;
-
-    @Mock
-    private ItemRepository itemRepository;
 
     @InjectMocks
     private OrderService orderService;
