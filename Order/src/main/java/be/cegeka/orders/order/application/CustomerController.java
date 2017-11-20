@@ -3,6 +3,7 @@ package be.cegeka.orders.order.application;
 
 import be.cegeka.orders.order.domain.customer.Customer;
 import be.cegeka.orders.order.domain.customer.CustomerService;
+import be.cegeka.orders.order.domain.orders.Order;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
@@ -32,4 +33,11 @@ public class CustomerController {
     public List<Customer> getAll(){
         return customerService.getAll();
     }
+
+    @GetMapping(path = "/orderHistory")
+    public List<Order> getAllOrdersFromCustomer(@RequestParam(value = "customerId",required = true)int id){
+        return customerService.getAllOrdersFromCustomer(id);
+    }
+
 }
+
