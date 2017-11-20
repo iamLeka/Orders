@@ -17,9 +17,6 @@ import java.util.List;
 public class OrderService {
 
     @Inject
-    private OrderRepository orderRepository;
-
-    @Inject
     private CustomerRepository customerRepository;
 
     @Inject
