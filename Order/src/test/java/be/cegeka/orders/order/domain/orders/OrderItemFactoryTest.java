@@ -69,4 +69,19 @@ public class OrderItemFactoryTest {
 
         Assertions.assertThat(actualOrderItem.getShippingDate()).isEqualTo(expectedOrderItem.getShippingDate());
     }
+
+    @Test
+    public void IfOrderedProductInStock_ShouldDecreaseWithOrderAmount() throws Exception {
+        ItemDto itemDto = new ItemDto(1, 3);
+        Item item = new Item(1, "bier", "lekker", BigDecimal.valueOf(1), 5);
+        when(itemRepository.getItemById(1)).thenReturn(item);
+
+        orderItemFactory.makeOrderItemFromDto(itemDto);
+        int expectedAmount = 2;
+        int actualAmount =  item.getStock();
+
+        Assertions.assertThat(expectedAmount).isEqualTo(actualAmount);
+    }
+
+    
 }
