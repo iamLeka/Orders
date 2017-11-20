@@ -16,13 +16,16 @@ public class OrderItemFactory {
     @Inject
     private ItemRepository itemRepository;
 
+    @Inject
+    private SupplierService supplierService;
+
     public OrderItem makeOrderItemFromDto(ItemDto itemDto) {
 
         Item item = itemRepository.getItemById(itemDto.getItemId());
 
         OrderItem orderItem = new OrderItem(item,
                 itemDto.getAmount(),
-                getShippingDate(item,itemDto.getAmount()),
+                getShippingDate(item, itemDto.getAmount()),
                 getItemGroupPrice(item.getPrice(), itemDto.getAmount())
         );
 
@@ -32,7 +35,7 @@ public class OrderItemFactory {
     }
 
     private LocalDate getShippingDate(Item item, int amount) {
-        if (item.getStock()>= amount) {
+        if (item.getStock() >= amount) {
             return LocalDate.now().plusDays(1);
         } else
             return LocalDate.now().plusWeeks(1);
@@ -48,7 +51,7 @@ public class OrderItemFactory {
         if (itemDto.getAmount() <= item.getStock()) {
             item.decreaseStock(itemDto.getAmount());
         } else {
-            //BESTEL itemDto.getAmount() BIJ SUPPLIER.
+            supplierService.postNewOrder("Itchy butthole", item.getName() + " " + itemDto.getAmount());
         }
     }
 }

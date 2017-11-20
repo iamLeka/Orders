@@ -14,8 +14,7 @@ import org.mockito.junit.MockitoRule;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.refEq;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class OrderItemFactoryTest {
@@ -25,6 +24,9 @@ public class OrderItemFactoryTest {
 
     @Mock
     private ItemRepository itemRepository;
+
+    @Mock
+    private SupplierService supplierService;
 
     @InjectMocks
     private OrderItemFactory orderItemFactory;
@@ -78,10 +80,20 @@ public class OrderItemFactoryTest {
 
         orderItemFactory.makeOrderItemFromDto(itemDto);
         int expectedAmount = 2;
-        int actualAmount =  item.getStock();
+        int actualAmount = item.getStock();
 
         Assertions.assertThat(expectedAmount).isEqualTo(actualAmount);
     }
 
-    
+    @Test
+    public void IfOrderedProductNotInStock_ShouldPlaceOrderWithSupplier() throws Exception {
+        ItemDto itemDto = new ItemDto(1, 3);
+        Item item = new Item(1, "bier", "lekker", BigDecimal.valueOf(1), 5);
+        when(itemRepository.getItemById(1)).thenReturn(item);
+
+        verify(supplierService).postNewOrder("Itchy butthole", item.getName() + " " + itemDto.getAmount());
+        //check if order is placed with supplier
+    }
+
+
 }
