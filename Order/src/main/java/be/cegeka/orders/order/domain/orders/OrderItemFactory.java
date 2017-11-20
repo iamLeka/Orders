@@ -26,11 +26,7 @@ public class OrderItemFactory {
                 getItemGroupPrice(item.getPrice(), itemDto.getAmount())
         );
 
-        if (itemDto.getAmount() <= item.getStock()) {
-            item.decreaseStock(itemDto.getAmount());
-        } else {
-            //BESTEL itemDto.getAmount() BIJ SUPPLIER.
-        }
+        checkStockOrder(itemDto);
 
         return orderItem;
     }
@@ -44,5 +40,15 @@ public class OrderItemFactory {
 
     private BigDecimal getItemGroupPrice(BigDecimal singlePrice, int amount) {
         return singlePrice.multiply(BigDecimal.valueOf(amount));
+    }
+
+    private void checkStockOrder(ItemDto itemDto) {
+        Item item = itemRepository.getItemById(itemDto.getItemId());
+
+        if (itemDto.getAmount() <= item.getStock()) {
+            item.decreaseStock(itemDto.getAmount());
+        } else {
+            //BESTEL itemDto.getAmount() BIJ SUPPLIER.
+        }
     }
 }
